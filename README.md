@@ -1,5 +1,5 @@
 # Handli json exceptions handler
-Handli laravel json exceptions handler package.
+Laravel json exception handling for web applications (forces json response in Laravel).
 
 ## Install
 ```sh
