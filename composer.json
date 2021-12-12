@@ -1,0 +1,26 @@
+{
+	"name": "breakermind/handli",
+	"type": "library",
+	"license": "MIT",
+	"autoload": {
+		"classmap": [
+			"src/"
+		],
+		"psr-4": {
+			"Handli\\": "src/"
+		}
+	},
+	"authors": [{
+		"name": "Marcin Łukaszewski",
+		"email": "marcin@breakermind.com"
+	}],
+	"minimum-stability": "dev",
+	"require": {},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Handli\\HandliServiceProvider"
+			]
+		}
+	}
+}
