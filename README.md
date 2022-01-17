@@ -21,8 +21,9 @@ php artisan vendor:publish --provider="Handli\HandliServiceProvider.php"
 config/handli.php
 ```php
 return [
-	'force_json_response' => true, // Default
-	'debug' => false, // Default
+	'force_json_response' => true,
+	'force_api_handler' => false,
+	'debug' => false,
 ];
 
  ```
