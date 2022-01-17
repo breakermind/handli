@@ -16,7 +16,7 @@ class HandliServiceProvider extends ServiceProvider
 			$this->app->singleton(ExceptionHandler::class, JsonHandler::class);
 		}
 		
-		if(config('handli.force_api_handler') == true) {
+		if(config('handli.force_api_handler') == true || config('app.force_api_handler') == true) {
 			$this->app->singleton(ExceptionHandler::class, ApiHandler::class);
 		}
 	}
