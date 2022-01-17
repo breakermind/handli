@@ -69,7 +69,7 @@ class ApiHandler extends ExceptionHandler
 
 		$this->reportable(function (Throwable $e) {
 			// Stop logging to lavavel logs
-			return false;
+			// return false;
 		});
 	}
 
