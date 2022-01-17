@@ -36,7 +36,7 @@ return [
 		"url": "https://github.com/breakermind/handli"
 	}],
 	"require": {
-		"breakermind/handli": "^1.0"
+		"breakermind/handli": "^2.0"
 	}
 }
 ```
