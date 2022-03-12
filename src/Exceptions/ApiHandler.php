@@ -4,6 +4,8 @@ namespace Handli\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
+use Illuminate\Auth\AuthenticationException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 // use Exception;
 // use Symfony\Component\Routing\Exception\InvalidParameterException;
@@ -55,7 +57,15 @@ class ApiHandler extends ExceptionHandler
 			) {
 				$msg = empty($e->getMessage()) ? 'Not Found' : $e->getMessage();
 				$code = empty($e->getCode()) ? 404 : $e->getCode();
+				
+				if($e instanceof AuthenticationException) {
+					$code = 401;
+				}
 
+				if($e instanceof NotFoundHttpException) {
+					$msg = 'Object Not Found';
+				}
+				
 				return response()->json([
 					'message' => $msg,
 					'code' => $code,
