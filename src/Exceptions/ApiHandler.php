@@ -63,7 +63,7 @@ class ApiHandler extends ExceptionHandler
 				}
 
 				if($e instanceof NotFoundHttpException) {
-					$msg = 'Object Not Found';
+					$msg = 'Not Found';
 				}
 				
 				return response()->json([
